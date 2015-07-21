@@ -326,8 +326,8 @@
         <h2 id="1_继承的概述">1 继承的概述</h2><p>多个类中存在相同属性和行为时，将这些内容抽取到单独一个类中，那么多个类无需再定义这些属性和行为，只要继承单独的那个类即可。</p>
 <p>多个类可以称为子类，单独这个类称为父类或者超类。子类可以直接访问父类中的非私有的属性和行为。</p>
 <p>通过extends关键字，类与类之间产生了继承关系。例如：</p>
-<pre><code><span class="class"><span class="keyword">class</span> <span class="title">SubDemo</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">Demo</span> {</span>}
-</code></pre><p>继承的出现提高了代码的复用性。还让类与类之间产生了关系，提供了多态的前提。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubDemo</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">Demo</span> &#123;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>继承的出现提高了代码的复用性。还让类与类之间产生了关系，提供了多态的前提。</p>
 <h2 id="2_继承的特点">2 继承的特点</h2><p>Java只支持单继承，不支持多继承。也就是说，一个类只能有一个父类，不可以有多个父类。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubDemo</span> <span class="keyword">extends</span> <span class="title">Demo</span> </span>&#123;&#125;    <span class="comment">//可以</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubDemo</span> /* <span class="title">DO</span> <span class="title">NOT</span> */ <span class="keyword">extends</span> <span class="title">Demo1</span>, <span class="title">Demo2</span>...  //不可以</span></span><br></pre></td></tr></table></figure>
 <p>Java支持多层继承（继承体系）</p>
@@ -343,8 +343,8 @@
 <h2 id="4_函数覆盖">4 函数覆盖</h2><p>子类中出现与父类一模一样的方法时，会出现覆盖操作，也称为重写或者复写。</p>
 <p>父类中的私有方法不可以覆盖。</p>
 <p>在子类覆盖方法中，继续使用被覆盖的方法可以通过如下方法获取：</p>
-<pre><code><span class="keyword">super</span>.函数名
-</code></pre><p>注意：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">super</span>.函数名</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
 <ul>
 <li>覆盖时，子类方法权限一定要大于或等于父类方法权限。</li>
 <li>静态只能覆盖静态。</li>
@@ -421,8 +421,8 @@
 <h2 id="8_接口">8 接口</h2><p>由于多继承容易带来安全隐患：当多个父类中定义了相同功能，而功能内容不同时，子类对象不确定要运行哪一个。</p>
 <p>接口将“多继承”通过另一种形式体现出来，即“多实现”。</p>
 <p>格式：</p>
-<pre><code><span class="class"><span class="keyword">interface</span> </span>{}
-</code></pre><p>接口中的成员修饰符是固定的：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>接口中的成员修饰符是固定的：</p>
 <ul>
 <li>成员常量：public static final</li>
 <li>成员函数：public abstract</li>
@@ -439,10 +439,10 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">需求：</span><br><span class="line">创建电脑运行实例。</span><br><span class="line">电脑运行基于主板，主板有PCI插槽，可以接通网卡和声卡。</span><br><span class="line">*/</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">PCI</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">open</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Mainboard</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Mainboard run"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">usePCI</span><span class="params">(PCI p)</span> </span>&#123;    <span class="comment">//接口型引用指向自己的子类对象。</span></span><br><span class="line">		<span class="keyword">if</span> (p != <span class="keyword">null</span>) &#123;</span><br><span class="line">			p.open();</span><br><span class="line">			p.close();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Netcard</span> <span class="keyword">implements</span> <span class="title">PCI</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">open</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Netcard open"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Netcard close"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Soundcard</span> <span class="keyword">implements</span> <span class="title">PCI</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">open</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Soundcard open"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Soundcard close"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ComputerRun</span> </span>&#123; </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Mainboard mb = <span class="keyword">new</span> Mainboard();</span><br><span class="line">		mb.run();</span><br><span class="line">		mb.usePCI(<span class="keyword">null</span>);</span><br><span class="line">		mb.usePCI(<span class="keyword">new</span> Netcard());</span><br><span class="line">		mb.usePCI(<span class="keyword">new</span> Soundcard());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="9_多态">9 多态</h2><p>多态指某一类事物的多种存在形态。</p>
 <p>例如，动物中的猫和狗。猫这个对象对应的类型是猫类型。</p>
-<pre><code><span class="type">Cat</span> x = <span class="keyword">new</span> <span class="type">Cat</span><span class="literal">()</span>;
-</code></pre><p>同时，猫也是动物的一种，也可以把猫称为动物。</p>
-<pre><code><span class="keyword">Animal</span> y = new Cat();
-</code></pre><p>动物是猫和狗具体事物中抽取出来的父类型。父类型引用指向了子类对象。</p>
+<figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Cat</span> x = <span class="keyword">new</span> <span class="type">Cat</span><span class="literal">()</span>;</span><br></pre></td></tr></table></figure>
+<p>同时，猫也是动物的一种，也可以把猫称为动物。</p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Animal</span> y = new Cat();</span><br></pre></td></tr></table></figure>
+<p>动物是猫和狗具体事物中抽取出来的父类型。父类型引用指向了子类对象。</p>
 <p>体现：父类或者接口的引用指向或者接收自己的子类对象。</p>
 <p>前提：</p>
 <ul>
@@ -493,8 +493,8 @@
 <h3 id="10-1_匿名内部类">10.1 匿名内部类</h3><p>匿名内部类就是内部类的简化写法。</p>
 <p>前提：内部类可以继承或实现一个外部类或者接口。</p>
 <p>格式：</p>
-<pre><code><span class="tag">new</span> 外部类名或者接口名() {覆盖类或者接口中的代码（也可以自定义内容）}
-</code></pre><p>简单理解，就是建立一个带内容的外部类或者接口的子类匿名对象。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> 外部类名或者接口名() &#123;覆盖类或者接口中的代码（也可以自定义内容）&#125;</span><br></pre></td></tr></table></figure>
+<p>简单理解，就是建立一个带内容的外部类或者接口的子类匿名对象。</p>
 <p>示例：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Inter</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">show1</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">show2</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">InnerClassDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		show(<span class="keyword">new</span> Inter() &#123;    <span class="comment">//匿名内部类</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">				System.out.println(<span class="string">"show1"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">				System.out.println(<span class="string">"show2"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">(Inter in)</span> </span>&#123;</span><br><span class="line">		in.show1();</span><br><span class="line">		in.show2();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="11_异常">11 异常</h2><h3 id="11-1_异常的体系">11.1 异常的体系</h3><ul>
@@ -556,8 +556,8 @@
 <h2 id="12_包">12 包</h2><p>包（package）可以对类文件进行分类管理，给类提供多层命名空间。</p>
 <p>package写在程序的第一行。</p>
 <p>类名的全称是：</p>
-<pre><code>包名.类名
-</code></pre><p>包也是一种封装形式。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">包名.类名</span><br></pre></td></tr></table></figure>
+<p>包也是一种封装形式。</p>
 <h3 id="12-1_包之间的访问权限">12.1 包之间的访问权限</h3><p>被访问的包中的类的权限必须是public的。</p>
 <p>类中的成员权限：public或者protected。</p>
 <p>protected是为其他包中的子类提供权限。</p>
@@ -598,6 +598,7 @@
 <td style="text-align:center">O</td>
 <td style="text-align:center">—-</td>
 <td style="text-align:center">—-</td>
+<td style="text-align:center">—-</td>
 </tr>
 </tbody>
 </table>
@@ -620,15 +621,21 @@
 <p>jar包的操作：通过jar.exe工具对jar包操作。</p>
 <p>指令示例：</p>
 <ul>
-<li><p>创建jar包<br>jar -cvf mypack.jar packa packb</p>
-</li>
-<li><p>查看jar包<br>jar -tvf mypack.jar [&gt;定向文件]</p>
-</li>
-<li><p>解压缩<br>jar -xvf mypack.jar</p>
-</li>
-<li><p>自定义jar包的清单文件<br>jar -cvfm mypack.jar mf.txt packa packb</p>
-</li>
+<li>创建jar包</li>
 </ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar -cvf mypack<span class="class">.jar</span> packa packb</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看jar包</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">jar</span> <span class="tag">-tvf</span> <span class="tag">mypack</span><span class="class">.jar</span> <span class="attr_selector">[&gt;定向文件]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>解压缩</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">jar</span> <span class="tag">-xvf</span> <span class="tag">mypack</span><span class="class">.jar</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>自定义jar包的清单文件</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar -cvfm mypack<span class="class">.jar</span> mf<span class="class">.txt</span> packa packb</span><br></pre></td></tr></table></figure>
 
       
     </div>
