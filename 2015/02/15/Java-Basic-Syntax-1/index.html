@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Java 基础 -- 语法（一） | Junbin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Java基础语法将分成八个部分介绍：关键字，标识符，注释，常量与变量，运算符，语句，函数，数组。
+1. 关键字定义：被Java语言赋予了特殊含义的单词。
+特点：关键字中所有字母都为小写。
+作用于：
+
+定义数据类型：class, interface, byte, short, int, long, float, double, char, boolean, void；
+定义数据类型值：true, f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 基础 -- 语法（一）">
+<meta property="og:url" content="http://yoursite.com/2015/02/15/Java-Basic-Syntax-1/index.html">
+<meta property="og:site_name" content="Junbin's Blog">
+<meta property="og:description" content="Java基础语法将分成八个部分介绍：关键字，标识符，注释，常量与变量，运算符，语句，函数，数组。
+1. 关键字定义：被Java语言赋予了特殊含义的单词。
+特点：关键字中所有字母都为小写。
+作用于：
+
+定义数据类型：class, interface, byte, short, int, long, float, double, char, boolean, void；
+定义数据类型值：true, f">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Syntax/jin-zhi-zhuan-huan.png">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Syntax/shu-ju-lei-xing.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Syntax/suan-shu-yun-suan-fu.png">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Syntax/bi-jiao-yun-suan-fu.png">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Syntax/luo-ji-yun-suan-fu.png">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Syntax/wei-yun-suan-fu.png">
+<meta property="og:updated_time" content="2015-07-21T12:54:02.781Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java 基础 -- 语法（一）">
+<meta name="twitter:description" content="Java基础语法将分成八个部分介绍：关键字，标识符，注释，常量与变量，运算符，语句，函数，数组。
+1. 关键字定义：被Java语言赋予了特殊含义的单词。
+特点：关键字中所有字母都为小写。
+作用于：
+
+定义数据类型：class, interface, byte, short, int, long, float, double, char, boolean, void；
+定义数据类型值：true, f">
+  
+    <link rel="alternative" href="/atom.xml" title="Junbin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/assets/blogImg/blog-head.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Junbin Deng</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">不积小流，无以成江海</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/junbindeng" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/junbindeng" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="/junbin.deng@outlook.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">爱生活，爱安卓，给自己带包盐</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Junbin Deng</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/assets/blogImg/blog-head.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Junbin Deng</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">不积小流，无以成江海</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/junbindeng" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/junbindeng" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="/junbin.deng@outlook.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Java-Basic-Syntax-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/02/15/Java-Basic-Syntax-1/" class="article-date">
+  	<time datetime="2015-02-15T10:03:18.000Z" itemprop="datePublished">2015-02-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java 基础 -- 语法（一）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java基础语法将分成八个部分介绍：关键字，标识符，注释，常量与变量，运算符，语句，函数，数组。</p>
+<h2 id="1-_关键字">1. 关键字</h2><p>定义：被Java语言赋予了特殊含义的单词。</p>
+<p>特点：关键字中所有字母都为小写。</p>
+<p>作用于：</p>
+<ul>
+<li>定义数据类型：class, interface, byte, short, int, long, float, double, char, boolean, void；</li>
+<li>定义数据类型值：true, false, null；</li>
+<li>定义流程控制：if, else, switch, case, default, while, do, for, break, continue, return；</li>
+<li>定义访问权限修饰符：private, protected, public；</li>
+<li>定义类，函数，变量修饰符：abstract, final, static, synchronized；</li>
+<li>定义类与类之间关系：extends, implements；</li>
+<li>定义建立，引用及判断实例：new, this, super, instanceof；</li>
+<li>异常处理：try, catch, finally, throw, throws；</li>
+<li>包：package, import；</li>
+<li>其他修饰符：native, strictfp, transient, volatile, assert。</li>
+</ul>
+<h2 id="2-_标识符">2. 标识符</h2><p>定义：在程序中自定义的一些名称。</p>
+<p>特点：由26个英文字母大小写，数字（0-9），符号（_$）组成。</p>
+<p>合法标识符定义规则：</p>
+<ul>
+<li>数字不可以开头；</li>
+<li>不可以使用关键字。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>Java严格区分大小写；</li>
+<li>为了提高阅读性，尽量起有意义的标识符名称。</li>
+</ul>
+<p>多单词组合时的名称规范：</p>
+<ul>
+<li>包名：所有字母都小写。如：xxxyyyzzz；</li>
+<li>类名接口名：所有单词的首字母大写。如：XxxYyyZzz；</li>
+<li>变量名和函数名：第一个单词首字母小写，第二个单词开始每个单词首字母大写。如：xxxYyyZzz；</li>
+<li>常量名：多单词所有字母都大写，每个单词用下划线连接。如：XXX_YYY_ZZZ。</li>
+</ul>
+<h2 id="3-_注释">3. 注释</h2><p>定义：用于注解说明程序的文字。</p>
+<p>作用：提高代码的阅读性。</p>
+<p>格式：</p>
+<ul>
+<li>单行注释<ul>
+<li>格式：//注释文字</li>
+</ul>
+</li>
+<li>多行注释<ul>
+<li>格式：/*注释文字*/</li>
+</ul>
+</li>
+<li>文档注释<ul>
+<li>格式：/**注释文字*/</li>
+</ul>
+</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line">这是我的Hello World程序。</span><br><span class="line"><span class="doctag">@author</span> 小强</span><br><span class="line">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span><br><span class="line"></span>&#123;</span><br><span class="line"><span class="comment">/*</span><br><span class="line">这是主函数，是程序的入口</span><br><span class="line">它的出现可以保证程序的独立运行，</span><br><span class="line">*/</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="comment">//这是输出语句用于将括号内的数据打印到控制台。</span></span><br><span class="line">		System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于单行和多行注释，被注释的文字，不会被JVM（Java虚拟机）解释执行。</p>
+<p>对于文档注释，是java特有的注释，其中注释内容可以被JDK提供的工具javadoc所解析，生成一套以网页文件形式体现的该程序的说明文档。</p>
+<blockquote>
+<p>小贴士：<br>注释是一个程序员必须要具有的良好编程习惯。初学者编写程序可以养成先写注释再写代码的习惯，将自己的思想通过注释先整理出来，再用代码去体现。因为代码仅仅是思想的一种体现形式而已。<br>注释宜少而精，不宜多而滥。不写过于详细的注释，对显而易见的代码添加的注释，以及罗嗦的注释。</p>
+</blockquote>
+<h2 id="4-_常量与变量">4. 常量与变量</h2><h3 id="4-1_常量">4.1 常量</h3><p>常量的定义：不能改变的数值。</p>
+<p>常量的分类：</p>
+<ul>
+<li>整数常量：所有整数；</li>
+<li>小数常量：所有小数；</li>
+<li>布尔型常量：只有两个数值，true和false；</li>
+<li>字符常量：将一个数字，字母或者符号用一对单引号（’ ‘）标识；</li>
+<li>字符串常量：将一个或者多个字符用一对双引号（” “）标识；</li>
+<li>null常量：只有一个数值就是null（空）。</li>
+</ul>
+<h4 id="4-1-1_进制">4.1.1 进制</h4><p>数运算的进位方法：</p>
+<ul>
+<li>二进制：0-1，满二进一；</li>
+<li>十进制：0-9，满十进一；</li>
+<li>八进制：0-7，满八进一；</li>
+<li>十六进制：0-9和A-F，满十六进一，用0x开头表示；</li>
+</ul>
+<p>原码：所对应的正数二进制。</p>
+<p>反码：所对应的正数二进制取反。</p>
+<p>补码：所对应的正数二进制取反加1。是负数的二进制表现形式。</p>
+<p>进制间转换方法：</p>
+<p><img src="/assets/blogImg/Java-Basic-Syntax/jin-zhi-zhuan-huan.png" alt="进制间转换"></p>
+<h3 id="4-2_变量">4.2 变量</h3><p>变量的定义：内存中的一个存储区域。该区域有自己的名称（变量名）和类型（数据类型），该区域的数据可以在同一类型范围内不断变化。</p>
+<p>作用：用来不断的存放同一类型的常量，并可以重复使用。</p>
+<p>使用变量时注意：</p>
+<ul>
+<li>其作用范围（在一对{}之间有效）；</li>
+<li>初始化值。</li>
+</ul>
+<p>定义变量的格式：</p>
+<pre><code>数据类型 变量名 = 初始化值<span class="comment">;</span>
+</code></pre><blockquote>
+<p>小贴士：格式是固定的，记住格式，以不变应万变。</p>
+</blockquote>
+<h4 id="4-2-1_数据类型分类">4.2.1 数据类型分类</h4><p><img src="/assets/blogImg/Java-Basic-Syntax/shu-ju-lei-xing.jpg" alt="数据类型分类"></p>
+<p>注：Java语言是强类型语言，对于每一种数据都定义了明确的具体数据类型，在内存中分配了不同大小的内存空间。</p>
+<h4 id="4-2-2_类型转换">4.2.2 类型转换</h4><h5 id="4-2-2-1_自动类型转换">4.2.2.1 自动类型转换</h5><ul>
+<li>当byte型、short型和char型的值在与int型的值进行运算时，byte型、short型和char型的值会被提升为int型，计算结果就是int型；</li>
+<li>如果一个操作数是long型，计算结果就是long型；</li>
+<li>如果一个操作数是float型，计算结果就是float型；</li>
+<li>如果一个操作数是double型，计算结果就是double型。</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span> b = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> x = <span class="number">4</span>;</span><br><span class="line">x = x + b;    <span class="comment">//b会自动提升为int类型进行运算</span></span><br></pre></td></tr></table></figure>
+<h5 id="4-2-2-2_强制类型转换">4.2.2.2 强制类型转换</h5><p>当数据类型需要变换时，可以强制转换为指定数据类型。</p>
+<p>举例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span> b = <span class="number">3</span>;</span><br><span class="line">b = b + <span class="number">4</span>;    <span class="comment">//报错</span></span><br><span class="line">b = (<span class="keyword">byte</span>) (b + <span class="number">4</span>);    <span class="comment">//强制类型转换，强制将b+4的结果转换为byte类型，再赋值给b</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-_运算符">5. 运算符</h2><p>运算符包括：算术运算符，赋值运算符，比较运算符，逻辑运算符，位运算符，三元运算符。</p>
+<h3 id="5-1_算术运算符">5.1 算术运算符</h3><p><img src="/assets/blogImg/Java-Basic-Syntax/suan-shu-yun-suan-fu.png" alt="算术运算符"></p>
+<p>注意：</p>
+<ul>
+<li>如果对负数取模，可以把模数负号忽略不记，如：5%-2=1。但被模数是负数就另当别论。</li>
+<li>对于除号“/”，它的整数除和小数除是有区别的。整数之间做除法时，只保留整数部分而舍弃小数部分。如：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">3510</span>;</span><br><span class="line">x = x / <span class="number">1000</span> * <span class="number">1000</span>;</span><br><span class="line">System.out.println(x);    <span class="comment">//输出结果为：3000</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>加号“+”除字符串相加功能外，还能把非字符串转换成字符串。如：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"5+5="</span>+<span class="number">5</span>+<span class="number">5</span>);    <span class="comment">//输出结果为：5+5=55</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-2_赋值运算符">5.2 赋值运算符</h3><p>符号：=, +=, -=, *=, /=, %=</p>
+<p>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a, b, c;</span><br><span class="line">a = b = c = <span class="number">3</span>;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>;</span><br><span class="line">a += <span class="number">5</span>;    <span class="comment">//等同运算a = a + 5;</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-3_比较运算符">5.3 比较运算符</h3><p><img src="/assets/blogImg/Java-Basic-Syntax/bi-jiao-yun-suan-fu.png" alt="比较运算符"></p>
+<p>注：</p>
+<ul>
+<li>比较运算符的结果都是boolean型，也就说要么是true，要么是false；</li>
+<li>比较运算符”==”不能误写成”=”。</li>
+</ul>
+<h3 id="5-4_逻辑运算符">5.4 逻辑运算符</h3><p><img src="/assets/blogImg/Java-Basic-Syntax/luo-ji-yun-suan-fu.png" alt="逻辑运算符"></p>
+<p>注：逻辑运算符用于连接布尔型表达式，在Java中不可以写成a &lt; x &lt; b，应该写成 x &gt; a &amp; x &lt; b。</p>
+<p>“&amp;” 和“ &amp;&amp;” 的区别：</p>
+<ul>
+<li>“&amp;”表示左边无论真假，右边都进行运算；</li>
+<li>“&amp;&amp;”表示如果左边为真，则右边参与运算；如果左边为假，则右边不参与运算；</li>
+<li>“|”和“||”的区别同理。</li>
+</ul>
+<p>“^”和“|”的区别：当左右都为true时，结果为false。</p>
+<h3 id="5-5_位运算符">5.5 位运算符</h3><p>位运算是直接对二进制进行运算。</p>
+<p><img src="/assets/blogImg/Java-Basic-Syntax/wei-yun-suan-fu.png" alt="位运算符"></p>
+<p>优点：位运算速度比算术运算速度快。</p>
+<h3 id="5-6_三元运算符">5.6 三元运算符</h3><p>格式：</p>
+<pre><code>(条件表达式)?表达式1:表达式2<span class="comment">;</span>
+</code></pre><ul>
+<li>如果条件为true，运算后的结果是表达式1；</li>
+<li>如果条件为false，运算后的结果是表达式2。</li>
+</ul>
+<p>示例：</p>
+<p>获取两个数中大数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">3</span>, y = <span class="number">4</span>, z;</span><br><span class="line">z = (x &gt; y) ? x : y;    <span class="comment">//z变量存储的就是两个数的大数</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/07/13/How-to-setup-a-Github-blog/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          快速搭建极简主题的GitHub博客
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/02/07/Java-Summery/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java 概述</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Java-Basic-Syntax-1" data-title="Java 基础 -- 语法（一）" data-url="http://yoursite.com/2015/02/15/Java-Basic-Syntax-1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Junbin Deng
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
