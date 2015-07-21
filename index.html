@@ -561,6 +561,39 @@
 <li>这两个语句单独存在，下面都不可以有语句，因为执行不到。</li>
 <li>标号的出现，可以让这两个语句作用于指定的范围。</li>
 </ul>
+<h2 id="7-_函数">7. 函数</h2><p>定义：函数就是定义在类中的具有特定功能的一段小程序。也称为方法。</p>
+<p>格式：</p>
+<pre><code>修饰符 返回值类型 函数名(参数类型 形式参数1, 参数类型 形式参数2，...) {
+    执行语句<span class="comment">;</span>
+    return 返回值<span class="comment">;</span>
+}
+</code></pre><ul>
+<li>返回值类型：函数运行后的结果的数据类型。</li>
+<li>参数类型：是形式参数的数据类型。</li>
+<li>形式参数：是一个变量，用于存储调用函数时传递给函数的实际参数。</li>
+<li>实际参数：传递给形式参数的具体数值。</li>
+<li>return：用于结束函数。</li>
+<li>返回值：该值会返回给调用者。</li>
+</ul>
+<p>特点：</p>
+<ul>
+<li>定义函数可以将功能代码进行封装，便于对该功能进行复用。</li>
+<li>函数只有被调用才会被执行。</li>
+<li>函数的出现提高了代码的复用性。</li>
+<li>当函数没有具体返回值时，返回值类型用关键字void表示，如果该函数中的return语句在最后一行可以省略不写。</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>函数中只能调用函数，不可以在函数内部定义函数。</li>
+<li>定义函数时，函数的结果应该返回给调用者，交由调用者处理。</li>
+</ul>
+<p>应用：</p>
+<ul>
+<li>明确要定义的功能最后的结果是什么；</li>
+<li>明确在定义该功能的过程中，是否需要未知内容参与运算。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">需求：定义一个功能，可以实现两个整数的加法运算。</span><br><span class="line">分析：</span><br><span class="line">1. 该功能的运算结果是什么？两个数的和，也是一个整数（int）。</span><br><span class="line">2. 在实现该功能的过程中是否有未知内容参与运算？两个加数(两个int参数）是不确定的。</span><br><span class="line">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getSum</span> <span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x+y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
