@@ -3,17 +3,31 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Junbin&#39;s Blog</title>
+  <title>Java 概述 | Junbin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Junbin's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1. Java 的简述Java是1995年SUN（Stanford University Network）公司推出的一门高级编程语言。
+Java是一门面向Internet的编程语言，目前已经成为Web应用程序的首选开发语言，具有简单易学，完全面向对象，安全可靠，跨平台等特点。目前，Java主要有三种技术架构：
+
+J2EE（Java 2 Platform Enterprise Edition）企业版">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 概述">
+<meta property="og:url" content="http://yoursite.com/2015/02/07/Java-Summery/index.html">
 <meta property="og:site_name" content="Junbin's Blog">
-<meta property="og:description">
+<meta property="og:description" content="1. Java 的简述Java是1995年SUN（Stanford University Network）公司推出的一门高级编程语言。
+Java是一门面向Internet的编程语言，目前已经成为Web应用程序的首选开发语言，具有简单易学，完全面向对象，安全可靠，跨平台等特点。目前，Java主要有三种技术架构：
+
+J2EE（Java 2 Platform Enterprise Edition）企业版">
+<meta property="og:image" content="http://yoursite.com/Java-Summery/jdk-jre-jvm.jpg">
+<meta property="og:image" content="http://yoursite.com/Java-Summery/javac.jpg">
+<meta property="og:image" content="http://yoursite.com/Java-Summery/javac-helloworld.jpg">
+<meta property="og:image" content="http://yoursite.com/Java-Summery/java-helloworld.png">
+<meta property="og:updated_time" content="2015-07-21T11:50:45.406Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Junbin's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Java 概述">
+<meta name="twitter:description" content="1. Java 的简述Java是1995年SUN（Stanford University Network）公司推出的一门高级编程语言。
+Java是一门面向Internet的编程语言，目前已经成为Web应用程序的首选开发语言，具有简单易学，完全面向对象，安全可靠，跨平台等特点。目前，Java主要有三种技术架构：
+
+J2EE（Java 2 Platform Enterprise Edition）企业版">
   
     <link rel="alternative" href="/atom.xml" title="Junbin&#39;s Blog" type="application/atom+xml">
   
@@ -161,139 +175,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-How-to-setup-a-Github-blog" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/13/How-to-setup-a-Github-blog/" class="article-date">
-  	<time datetime="2015-07-13T11:13:59.000Z" itemprop="datePublished">2015-07-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/13/How-to-setup-a-Github-blog/">快速搭建极简主题的GitHub博客</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="说明">说明</h2><ul>
-<li>需要有一个 GitHub 账号，可以在此申请：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></li>
-<li>此教程针对 Windows 系统用户</li>
-<li>此教程针对建立以 <a href="http://用户名.github.io" target="_blank" rel="external">http://用户名.github.io</a> 为域名的博客</li>
-<li>此教程实现的博客可以满足发布博文的基本需求</li>
-</ul>
-<h2 id="下载和安装">下载和安装</h2><ul>
-<li><p>Git<br>  <a href="https://git-scm.com/download/win" target="_blank" rel="external">https://git-scm.com/download/win</a></p>
-</li>
-<li><p>Node.js<br>  <a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a></p>
-</li>
-</ul>
-<h2 id="配置_SSH_Keys">配置 SSH Keys</h2><p>SSH Key 是用来让本地的 git 项目与 GitHub 服务器建立联系的。</p>
-<h3 id="检查本地是否存在_SSH_keys">检查本地是否存在 SSH keys</h3><p>在所有程序中找到 Git，运行 GitBush，在弹出的窗口中输入并执行以下指令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/. ssh</span><br></pre></td></tr></table></figure>
-<p>如果提示 No such file or directory 就说明是第一次使用 git。</p>
-<h3 id="生成一个新的_SSH_Key">生成一个新的 SSH Key</h3><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"你的邮箱@youremail.com"</span></span><br><span class="line">Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa <span class="keyword">key</span> pair.</span><br><span class="line">Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the <span class="keyword">key</span> (/Users/your_user_directory/.ssh/id_rsa):&lt;回车&gt;</span><br></pre></td></tr></table></figure>
-<p>要求输入密码，这个密码会在你提交项目时使用。</p>
-<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):<span class="variable">&lt;密码&gt;</span></span><br><span class="line">Enter same passphrase again:<span class="variable">&lt;确认密码&gt;</span></span><br></pre></td></tr></table></figure>
-<p>看到这样的界面，就说明成功设置ssh key了。</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved <span class="keyword">in</span> <span class="regexp">/Users/</span>you<span class="regexp">/.ssh/</span>id_rsa.</span><br><span class="line"># Your <span class="keyword">public</span> key has been saved <span class="keyword">in</span> <span class="regexp">/Users/</span>you<span class="regexp">/.ssh/</span>id_rsa.pub.</span><br><span class="line"># The key fingerprint <span class="string">is:</span></span><br><span class="line"># <span class="number">01</span>:<span class="number">0</span><span class="string">f:</span><span class="string">f4:</span><span class="number">3</span><span class="string">b:</span><span class="string">ca:</span><span class="number">85</span>:<span class="string">d6:</span><span class="number">17</span>:<span class="string">a1:</span><span class="number">7</span><span class="string">d:</span><span class="string">f0:</span><span class="number">68</span>:<span class="number">9</span><span class="string">d:</span><span class="string">f0:</span><span class="string">a2:</span>db your_email<span class="annotation">@example</span>.com</span><br></pre></td></tr></table></figure>
-<h3 id="添加_SSH_key_到_GitHub">添加 SSH key 到 GitHub</h3><ol>
-<li>用记事本打开 C:\Users\你的系统用户名\id_rsa.pub 文件。内容为刚才生成的密钥，复制下来。</li>
-<li>登陆 GitHub，点击右上角的 Account Settings -&gt; SSH Public keys -&gt; add another public keys。</li>
-<li>把刚才复制的密钥粘贴到 key 文本框中，点击 Add key 就完成了。</li>
-</ol>
-<h3 id="测试连接">测试连接</h3><p>打开 Git Bash，输入：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">ssh</span> -T git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure>
-<p>你可能会看到这个提示，输入 yes。</p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># The authenticity of host 'github.com (207.97.227.239)' can't be established.</span></span><br><span class="line"><span class="preprocessor"># RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span></span><br><span class="line"><span class="preprocessor"># Are you sure you want to continue connecting (yes/no)?</span></span><br></pre></td></tr></table></figure>
-<p>如果显示的用户名是你的，则配置 SSH key 完成。</p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Hi username! You've successfully authenticated, but GitHub does not</span></span><br><span class="line"><span class="preprocessor"># provide shell access.</span></span><br></pre></td></tr></table></figure>
-<h2 id="创建_GitHub_仓库">创建 GitHub 仓库</h2><p>登录 GitHub首页，点击页面右下角的 New Repository。接着填写项目信息：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">project name：用户名<span class="class">.github</span><span class="class">.io</span></span><br><span class="line"></span><br><span class="line">description： 项目描述</span><br></pre></td></tr></table></figure>
-<p>注意，GitHub Pages 的 Repository 的 项目名是按以上格式规定的。</p>
-<p>点击 Create Repository 完成创建。</p>
-<h2 id="使用_Hexo_博客框架">使用 Hexo 博客框架</h2><p>Hexo 是一个简洁的博客框架，使用 Markdown 解析文章，几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h3 id="安装_Hexo">安装 Hexo</h3><p>运行 GitBush，输入并执行：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -<span class="keyword">g</span> hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
-<h3 id="配置_Hexo">配置 Hexo</h3><p>在本地建立一个名叫 Hexo 的文件夹，然后在此文件夹中右键打开 Git Bash，输入并执行：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init</span><br></pre></td></tr></table></figure>
-<p>随后会在该文件夹中自动生成使用 Hexo 建立网站所需要的文件。</p>
-<h3 id="安装主题">安装主题</h3><p>Junbin 推荐 hexo-theme-yilia 主题： <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia</a></p>
-<p>安装方法：</p>
-<p>在 Hexo 文件夹中右键打开 Git Bush，输入并执行：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git clone <span class="symbol">https:</span>/<span class="regexp">/github.com/litten</span><span class="regexp">/hexo-theme-yilia.git themes/yilia</span></span><br></pre></td></tr></table></figure>
-<h3 id="配置主题">配置主题</h3><p>用记事本打开 hexo 根目录下的 _config.yml， 修改参数为 theme: yilia</p>
-<p>此时该主题就替换了 Hexo 默认的主题。</p>
-<h2 id="新建一篇博文">新建一篇博文</h2><p>在 Hexo 文件夹中右键打开 Git Bush，输入并执行：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"文章的标题"</span></span><br></pre></td></tr></table></figure>
-<p>这时会在 /Hexo/_posts/ 创建一个名为 <em>文章的标题.md</em> 的文件，可以使用 MarkDown 编辑器撰写博文。</p>
-<p>Junbin 推荐 markdown2：<a href="http://markdownpad.com/" target="_blank" rel="external">http://markdownpad.com/</a></p>
-<h2 id="使用本地服务器预览">使用本地服务器预览</h2><p>如果是第一次在 Hexo 文件夹使用该功能，需要右键打开 Git Bush，输入并执行：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure>
-<p>然后，需要生成并启动本地服务，进行文章预览调试。输入并执行：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">d</span> -<span class="keyword">g</span></span><br></pre></td></tr></table></figure>
-<p>接着，在 Hexo 文件夹中右键打开 Git Bush，输入并执行：</p>
-<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
-<p>如果看到</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO Hexo is running <span class="keyword">at</span> <span class="keyword">http</span>://<span class="number">0.0</span>.0.0:<span class="number">4000</span>/. Press Ctrl+C <span class="built_in">to</span> <span class="built_in">stop</span>.</span><br></pre></td></tr></table></figure>
-<p>就说明本地服务器正常启动了。在浏览器中输入 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 就可以预览当前博客的效果。</p>
-<p>按下 Ctrl + C 可以停止当前预览服务器。</p>
-<h2 id="部署到_GitHub_Page">部署到 GitHub Page</h2><p>如果是第一次部署，需要更改 Hexo 文件夹根目录 _config.yml 有关 deploy 的 type 和 repo 的参数值：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/用户名/用户名.github.io.git</span></span><br></pre></td></tr></table></figure>
-<p>然后，清除缓存文件：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> clean</span><br></pre></td></tr></table></figure>
-<p>接着，部署到 GitHub 服务器，输入并执行：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> deploy</span><br></pre></td></tr></table></figure>
-<p>输入你的 GitHub 用户名：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Username <span class="keyword">for</span> <span class="string">'https</span>:<span class="comment">//github.com': 用户名</span></span><br></pre></td></tr></table></figure>
-<p>输入你的 GitHub 密码：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">Password</span> for <span class="string">'https://username<span class="variable">@github</span>.com'</span>: 密码</span><br></pre></td></tr></table></figure>
-<p>如果看见这个，恭喜你，部署成功了：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO Deploy <span class="keyword">done</span>: git</span><br></pre></td></tr></table></figure>
-<p>参观一下你专属的 GitHub 博客吧 :)</p>
-<p><a href="http://用户名.github.io" target="_blank" rel="external">http://用户名.github.io</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Java-Summery" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Java-Summery" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/02/07/Java-Summery/" class="article-date">
@@ -309,12 +191,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/07/Java-Summery/">Java 概述</a>
+    <h1 class="article-title" itemprop="name">
+      Java 概述
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -425,31 +318,66 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/07/13/How-to-setup-a-Github-blog/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          快速搭建极简主题的GitHub博客
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
 
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Java-Summery" data-title="Java 概述" data-url="http://yoursite.com/2015/02/07/Java-Summery/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -473,8 +401,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
