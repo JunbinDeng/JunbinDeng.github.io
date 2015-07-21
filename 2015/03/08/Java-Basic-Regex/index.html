@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Java 基础 -- 正则表达式 | Junbin&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="正则表达式是符合一定规则的表达式。用于操作字符串，通过一些特殊的符号代替一些代码操作。
+好处：可以简化对字符串的复杂操作。
+弊端：符号定义越多，正则表达式越长，阅读性越差。
+1. 常用构造摘要
+
+
+构造
+匹配
+
+
+
+
+字符
+
+
+
+x
+字符 x
+
+
+\
+反斜线字符
+
+
+\t
+制表符 (‘\u0009’)
+
+
+\n
+换行符 (‘\u000A’)
+
+
+\r
+回车符 (‘\u000D’)
+
+
+\f
+换页符">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 基础 -- 正则表达式">
+<meta property="og:url" content="http://yoursite.com/2015/03/08/Java-Basic-Regex/index.html">
+<meta property="og:site_name" content="Junbin's Blog">
+<meta property="og:description" content="正则表达式是符合一定规则的表达式。用于操作字符串，通过一些特殊的符号代替一些代码操作。
+好处：可以简化对字符串的复杂操作。
+弊端：符号定义越多，正则表达式越长，阅读性越差。
+1. 常用构造摘要
+
+
+构造
+匹配
+
+
+
+
+字符
+
+
+
+x
+字符 x
+
+
+\
+反斜线字符
+
+
+\t
+制表符 (‘\u0009’)
+
+
+\n
+换行符 (‘\u000A’)
+
+
+\r
+回车符 (‘\u000D’)
+
+
+\f
+换页符">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Regex/original-page.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Regex/result-output.jpg">
+<meta property="og:updated_time" content="2015-07-21T16:41:15.129Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java 基础 -- 正则表达式">
+<meta name="twitter:description" content="正则表达式是符合一定规则的表达式。用于操作字符串，通过一些特殊的符号代替一些代码操作。
+好处：可以简化对字符串的复杂操作。
+弊端：符号定义越多，正则表达式越长，阅读性越差。
+1. 常用构造摘要
+
+
+构造
+匹配
+
+
+
+
+字符
+
+
+
+x
+字符 x
+
+
+\
+反斜线字符
+
+
+\t
+制表符 (‘\u0009’)
+
+
+\n
+换行符 (‘\u000A’)
+
+
+\r
+回车符 (‘\u000D’)
+
+
+\f
+换页符">
+  
+    <link rel="alternative" href="/atom.xml" title="Junbin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/assets/blogImg/blog-head.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Junbin Deng</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">不积小流，无以成江海</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/junbindeng" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/junbindeng" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:junbin.deng@outlook.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">爱生活，爱安卓，给自己带包盐</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Junbin Deng</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/assets/blogImg/blog-head.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Junbin Deng</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">不积小流，无以成江海</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/junbindeng" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/junbindeng" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:junbin.deng@outlook.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Java-Basic-Regex" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/08/Java-Basic-Regex/" class="article-date">
+  	<time datetime="2015-03-08T04:20:15.000Z" itemprop="datePublished">2015-03-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java 基础 -- 正则表达式
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>正则表达式是符合一定规则的表达式。用于操作字符串，通过一些特殊的符号代替一些代码操作。</p>
+<p>好处：可以简化对字符串的复杂操作。</p>
+<p>弊端：符号定义越多，正则表达式越长，阅读性越差。</p>
+<h2 id="1-_常用构造摘要">1. 常用构造摘要</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">构造</th>
+<th style="text-align:left">匹配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>字符</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">字符 x</td>
+</tr>
+<tr>
+<td style="text-align:left">\</td>
+<td style="text-align:left">反斜线字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td style="text-align:left">制表符 (‘\u0009’)</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">换行符 (‘\u000A’)</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td style="text-align:left">回车符 (‘\u000D’)</td>
+</tr>
+<tr>
+<td style="text-align:left">\f</td>
+<td style="text-align:left">换页符 (‘\u000C’)</td>
+</tr>
+<tr>
+<td style="text-align:left">\a</td>
+<td style="text-align:left">报警符 (‘\u0007’)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>字符类</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">[abc]</td>
+<td style="text-align:left">a、b 或 c (简单类)</td>
+</tr>
+<tr>
+<td style="text-align:left">[‘abc]</td>
+<td style="text-align:left">任何字符，除了a、b 或 c (否定)</td>
+</tr>
+<tr>
+<td style="text-align:left">[a-zA-Z]</td>
+<td style="text-align:left">a 到 z 或 A 到 Z，包括两头字母 (范围)</td>
+</tr>
+<tr>
+<td style="text-align:left">[a-d[m-p]]</td>
+<td style="text-align:left">a 到 d 或 m 到 p: [a-dm-p] (并集)</td>
+</tr>
+<tr>
+<td style="text-align:left">[a-z&amp;&amp;[def]]</td>
+<td style="text-align:left">d、e 或 f (交集)</td>
+</tr>
+<tr>
+<td style="text-align:left">[a-z&amp;&amp;[‘bc]]</td>
+<td style="text-align:left">a 到 z，除了 b 和 c: [ad-z] (减去)</td>
+</tr>
+<tr>
+<td style="text-align:left">[a-z&amp;&amp;[‘m-p]]</td>
+<td style="text-align:left">a 到 z，而非 m 到 p: [a-1q-z] (减去)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>预定义字符类</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">.</td>
+<td style="text-align:left">任何字符 (与行结束符可能匹配也可能不匹配)</td>
+</tr>
+<tr>
+<td style="text-align:left">\d</td>
+<td style="text-align:left">数字: [0-9]</td>
+</tr>
+<tr>
+<td style="text-align:left">\D</td>
+<td style="text-align:left">非数字: [‘0-9]</td>
+</tr>
+<tr>
+<td style="text-align:left">\s</td>
+<td style="text-align:left">空白字符: [ \t\n\x0B\f\r]</td>
+</tr>
+<tr>
+<td style="text-align:left">\S</td>
+<td style="text-align:left">非空白字符: [^\s]</td>
+</tr>
+<tr>
+<td style="text-align:left">\w</td>
+<td style="text-align:left">单词字符: [a-zA-Z_0-9]</td>
+</tr>
+<tr>
+<td style="text-align:left">\W</td>
+<td style="text-align:left">非单词字符: [^\w]</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>边界匹配器</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">行的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">$</td>
+<td style="text-align:left">行的结尾</td>
+</tr>
+<tr>
+<td style="text-align:left">\b</td>
+<td style="text-align:left">单词边界</td>
+</tr>
+<tr>
+<td style="text-align:left">\B</td>
+<td style="text-align:left">非单词边界</td>
+</tr>
+<tr>
+<td style="text-align:left">\A</td>
+<td style="text-align:left">输入的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\G</td>
+<td style="text-align:left">上一个匹配的结尾</td>
+</tr>
+<tr>
+<td style="text-align:left">\Z</td>
+<td style="text-align:left">输入的结尾，仅用于最后的结束符 (如果有的话)</td>
+</tr>
+<tr>
+<td style="text-align:left">\z</td>
+<td style="text-align:left">输入的结尾</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Greedy 数量词</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">X?</td>
+<td style="text-align:left">X, 一次或一次也没有</td>
+</tr>
+<tr>
+<td style="text-align:left">X*</td>
+<td style="text-align:left">X, 零次或多次</td>
+</tr>
+<tr>
+<td style="text-align:left">X+</td>
+<td style="text-align:left">X, 一次或多次</td>
+</tr>
+<tr>
+<td style="text-align:left">X{n}</td>
+<td style="text-align:left">X, 恰好 n 次</td>
+</tr>
+<tr>
+<td style="text-align:left">X{n,}</td>
+<td style="text-align:left">X, 至少 n 次</td>
+</tr>
+<tr>
+<td style="text-align:left">X{n,m}</td>
+<td style="text-align:left">X, 至少 n 次，但是不超过 m 次</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Logical 运算符</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">XY</td>
+<td style="text-align:left">X 后跟 Y</td>
+</tr>
+<tr>
+<td style="text-align:left">X\Y</td>
+<td style="text-align:left">X 或 Y</td>
+</tr>
+<tr>
+<td style="text-align:left">(X)</td>
+<td style="text-align:left">X, 作为捕获组</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Back 引用</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">任何匹配的 n<sup>th</sup> 捕获组</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>引用</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">\</td>
+<td style="text-align:left">Nothing, 但是引用以下字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\Q</td>
+<td style="text-align:left">Nothing, 但是引用所有字符, 直到 \E</td>
+</tr>
+<tr>
+<td style="text-align:left">\E</td>
+<td style="text-align:left">Nothing, 但是结束从 \Q 开始的引用</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>特殊构造 (非捕获)</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">(?:X)</td>
+<td style="text-align:left">X, 作为非捕获组</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-1_组和捕获">1.1 组和捕获</h3><p>捕获组可以通过从左到右计算其开括号来编号。例如，在表达式 ((A)(B(C))) 中，存在四个这样的组： </p>
+<p>1     ((A)(B(C)))<br>2     \A<br>3     (B(C))<br>4     (C) </p>
+<p>组零始终代表整个表达式。 </p>
+<p>之所以这样命名捕获组是因为在匹配中，保存了与这些组匹配的输入序列的每个子序列。捕获的子序列稍后可以通过 Back 引用在表达式中使用，也可以在匹配操作完成后从匹配器获取。 </p>
+<p>与组关联的捕获输入始终是与组最近匹配的子序列。如果由于量化的缘故再次计算了组，则在第二次计算失败时将保留其以前捕获的值（如果有的话）例如，将字符串 “aba” 与表达式 (a(b)?)+ 相匹配，会将第二组设置为 “b”。在每个匹配的开头，所有捕获的输入都会被丢弃。 </p>
+<p>以 (?) 开头的组是纯的非捕获组，它不捕获文本，也不针对组合计进行计数。</p>
+<h2 id="2-_主要功能">2. 主要功能</h2><p>正则表达式的主要功能有：匹配，切割，替换，获取。</p>
+<h3 id="2-1_匹配">2.1 匹配</h3><p>匹配是判断一个字符串是否符合规则。</p>
+<p>String 类方法：</p>
+<ul>
+<li>boolean <strong>matches</strong>(String regex)：告知此字符串是否匹配给定的正则表达式。</li>
+</ul>
+<p>示例 1：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * 需求：判断给定字符串是否符合手机号规则</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">checkTel</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		String tel = <span class="string">"16900001111"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 规则：第 1 位是 1，第 2 位是 3、5、8，随后的 9 位是任意数字</span></span><br><span class="line">		String telReg = <span class="string">"1[358]\\d&#123;9&#125;"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (tel.matches(telReg)) &#123;</span><br><span class="line">			System.out.println(tel + <span class="string">"手机号格式正确"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(tel + <span class="string">"手机号码有误"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * 需求：写一个正则表达式，可以匹配尾号5连的手机号。规则: 第1位是1，第二位可以是数字3458其中之一，后面4位任意数字，最后5位为任意相同的数字。例如：18601088888、13912366666</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test9</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		String tel = <span class="string">"18601088888"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 任意相同的 5 位数，(\\d&#123;1&#125;) 为捕获组 1，\\1&#123;4&#125; 为引用组 1，恰好 4 次</span></span><br><span class="line">		String telReg = <span class="string">"1[3458]\\d&#123;4&#125;(\\d&#123;1&#125;)\\1&#123;4&#125;"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//若匹配，结果为true; 若不匹配，结果为false</span></span><br><span class="line">		System.out.println(tel.matches(telReg));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>示例 2：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * 需求：判断给定字符串是否符合 QQ 号规则</span><br><span class="line"> * 规则：QQ 号在 5-11 位数之间，开头不能是 0</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">checkQQ</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		String qq = <span class="string">"215786721"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 第 1 位数字是 1-9，随后的位数是数字，出现的次数在 4-10 之间</span></span><br><span class="line">		String regex = <span class="string">"[1-9]\\d&#123;4,10&#125;"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (qq.matches(regex)) &#123;</span><br><span class="line">			System.out.println(qq + <span class="string">"是 QQ 号"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(qq + <span class="string">"不是 QQ 号"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-2_切割">2.2 切割</h3><p>切割是按照规则将字符串拆分成多个字符串。</p>
+<p>String 类方法：</p>
+<ul>
+<li>String[] <strong>split</strong>(String regex)：根据给定正则表达式的匹配拆分此字符串。</li>
+<li>String[] <strong>split</strong>(String regex, int limit)：根据匹配给定的正则表达式来拆分此字符串。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * 需求：按要求切割字符串，存入字符串数组里，输出数组中的元素</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RegexDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		String str = <span class="string">"ZhangSan.  Lisi.  WangWu.  SuperQQman"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 按"."切。因为表达式 . 代表任意字符，所以要表示"."就在它前面加上转义符 \ ，单个反斜线与表达式 \\ 匹配</span></span><br><span class="line">		String regex =  <span class="string">"\\."</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 按" "切。可能出现多个空格</span></span><br><span class="line">		regex = <span class="string">" +"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 按出现2次或以上的叠词切</span></span><br><span class="line">		regex = <span class="string">"(.)\\1+"</span>;</span><br><span class="line">		</span><br><span class="line">		String[] arr = str.split(regex);</span><br><span class="line">		</span><br><span class="line">		System.out.println(arr.length);</span><br><span class="line">		<span class="keyword">for</span> (String s: arr) &#123;</span><br><span class="line">			System.out.println(s);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-3_替换">2.3 替换</h3><p>替换是将字符串按照规则变换成另一个字符串。</p>
+<p>String 类方法：</p>
+<ul>
+<li>String <strong>replaceAll</strong>(String regex, String replacement)：使用给定的 replacement 替换此字符串所有匹配给定的正则表达式的子字符串。 </li>
+</ul>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * 需求：替换字符串中的元素</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReplaceDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		String str = <span class="string">"wer1389980000ty1234uiod234345675f"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 把原字符串中至少连续出现 5 次的数字替换成 # </span></span><br><span class="line">		String regex = <span class="string">"\\d&#123;5,&#125;"</span>;</span><br><span class="line">		String replacement = (<span class="string">"#"</span>);</span><br><span class="line">				</span><br><span class="line">		String newStr = str.replaceAll(regex, replacement);</span><br><span class="line">		</span><br><span class="line">		System.out.println(newStr);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-4_获取">2.4 获取</h3><p>获取是取出字符串中符合规则的子串。</p>
+<p>Patten 类方法：</p>
+<ul>
+<li>static Pattern <strong>compile</strong>(String regex)：将给定的正则表达式编译到模式中。 </li>
+<li>Matcher <strong>matcher</strong>(CharSequence input)：创建匹配给定输入与此模式的匹配器。</li>
+</ul>
+<p>Macher 类方法：</p>
+<ul>
+<li>boolean <strong>find</strong>()：尝试查找与该模式匹配的输入序列的下一个子序列。</li>
+<li>String <strong>group</strong>()：返回由以前匹配操作所匹配的输入子序列。</li>
+<li>int <strong>start</strong>()：返回以前匹配的初始索引。</li>
+<li>int <strong>end</strong>()：返回最后匹配字符之后的偏移量。</li>
+</ul>
+<p>步骤：</p>
+<ol>
+<li>将正则表达式封装成对象。</li>
+<li>将正则对象与要操作的字符串相关联。</li>
+<li>关联后，获取正则匹配引擎。</li>
+<li>通过引擎取出符合规则的子串。</li>
+</ol>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * 需求：取出长度为4位的字符串</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RegexDemo2</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		String input = <span class="string">"ming tian jiu yao fang jia le, da jia."</span>;</span><br><span class="line">		</span><br><span class="line">		System.out.println(input);</span><br><span class="line">		</span><br><span class="line">		String regex = <span class="string">"[a-z]&#123;4&#125;"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 将规则封装成对象</span></span><br><span class="line">		Pattern p = Pattern.compile(regex);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 将正则对象与要操作的字符串相关联，获取匹配器对象</span></span><br><span class="line">		Matcher m = p.matcher(input);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 通过引擎取出符合规则的子串</span></span><br><span class="line">		<span class="keyword">while</span> (m.find()) &#123;</span><br><span class="line">			System.out.println(m.group());</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// 获取角标</span></span><br><span class="line">			System.out.println(<span class="string">"index = "</span> + m.start() + <span class="string">"-"</span> + m.end());</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-_应用">3. 应用</h2><h3 id="3-1_IP_地址排序">3.1 IP 地址排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * 需求：给 IP 地址排序</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ipSort</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		String ip = <span class="string">"192.68.1.254 102.49.23.013 10.10.10.10 2.2.2.2 8.109.90.30"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 给每一个地址段前都补上 2 个 0。 $1 表示提取括号内的组 1 (\\d+)</span></span><br><span class="line">		ip = ip.replaceAll(<span class="string">"(\\d+)"</span>, <span class="string">"00$1"</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 把超出 3 位后的 0 全都去掉</span></span><br><span class="line">		ip = ip.replaceAll(<span class="string">"0*(\\d&#123;3&#125;)"</span>, <span class="string">"$1"</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// IP 地址分割后放入数组里</span></span><br><span class="line">		String[] arr = ip.split(<span class="string">" "</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 放入TreeSet集合里排序</span></span><br><span class="line">		TreeSet&lt;String&gt; ts = <span class="keyword">new</span> TreeSet&lt;String&gt;();</span><br><span class="line">		<span class="keyword">for</span> (String s : arr) &#123;</span><br><span class="line">			ts.add(s);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 遍历集合取出 IP 地址，将每个地址前面的 0 去掉</span></span><br><span class="line">		<span class="keyword">for</span> (String s : ts) &#123;</span><br><span class="line">			System.out.println(s.replaceAll(<span class="string">"0*(\\d+)"</span>, <span class="string">"$1"</span>));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-2_网页爬虫">3.2 网页爬虫</h3><p>URL 类方法：</p>
+<ul>
+<li><strong>URL</strong>(String spec)：根据 String 表示形式创建 URL 对象。</li>
+<li>URLConnection <strong>openConnection</strong>()：返回一个 URLConnection 对象，它表示到 URL 所引用的远程对象的连接。</li>
+</ul>
+<p>URLConnection 类方法：</p>
+<ul>
+<li>InputStream <strong>getInputStream</strong>()：返回从此打开的连接读取的输入流。 </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.net.URL;</span><br><span class="line"><span class="keyword">import</span> java.net.URLConnection;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * 需求：过滤出网页中所有的邮件地址（网页爬虫）</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GetMail</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 定义 URL 地址</span></span><br><span class="line">		URL url = <span class="keyword">new</span> URL(<span class="string">"http://localhost:8080/myweb/mail.html"</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 连接 URL 地址</span></span><br><span class="line">		URLConnection conn = url.openConnection();</span><br><span class="line">		</span><br><span class="line">		BufferedReader bufIn = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(conn.getInputStream()));</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 邮件地址规则</span></span><br><span class="line">		String mailReg = <span class="string">"\\w+@\\w+(\\.\\w+)+"</span>;</span><br><span class="line">		</span><br><span class="line">		Pattern p = Pattern.compile(mailReg);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (String line = <span class="keyword">null</span>; (line = bufIn.readLine()) != <span class="keyword">null</span>; ) &#123;</span><br><span class="line">			Matcher m = p.matcher(line);</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">while</span> (m.find()) &#123;</span><br><span class="line">				System.out.println(m.group());</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>原网页：</p>
+<p><img src="/assets/blogImg/Java-Basic-Regex/original-page.jpg" alt="原网页"></p>
+<p>输出结果：</p>
+<p><img src="/assets/blogImg/Java-Basic-Regex/result-output.jpg" alt="输出结果"></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/03/13/Java-Basic-Reflect/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Java 基础 -- 反射
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/03/06/Java-Basic-Web/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java 基础 -- 网络编程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Java-Basic-Regex" data-title="Java 基础 -- 正则表达式" data-url="http://yoursite.com/2015/03/08/Java-Basic-Regex/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Junbin Deng
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
