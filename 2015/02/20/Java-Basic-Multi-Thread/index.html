@@ -6,30 +6,24 @@
   <title>Java 基础 -- 多线程 | Junbin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1 多线程的概念要知道什么是多线程，先要知道什么是线程。要知道什么是线程，先要知道什么是进程。
-进程：一个正在执行中的程序。每一个进程的执行都有一个执行顺序，该顺序是一个执行路径，或者叫一个控制单元。
-线程：进程中的一个独立的控制单元。线程在控制着进程的执行。一个进程中至少有一个线程。
-多线程：JVM启动的时候会有一个进程java.exe，该进程中至少有一个线程负责java程序的运行，而且这个线程">
+进程：一个正在执行中的程序。每一个进程的执行都有一个执行顺序，该顺序是一个执行路径，或者叫一个控制单元。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 基础 -- 多线程">
 <meta property="og:url" content="http://yoursite.com/2015/02/20/Java-Basic-Multi-Thread/index.html">
 <meta property="og:site_name" content="Junbin's Blog">
 <meta property="og:description" content="1 多线程的概念要知道什么是多线程，先要知道什么是线程。要知道什么是线程，先要知道什么是进程。
-进程：一个正在执行中的程序。每一个进程的执行都有一个执行顺序，该顺序是一个执行路径，或者叫一个控制单元。
-线程：进程中的一个独立的控制单元。线程在控制着进程的执行。一个进程中至少有一个线程。
-多线程：JVM启动的时候会有一个进程java.exe，该进程中至少有一个线程负责java程序的运行，而且这个线程">
+进程：一个正在执行中的程序。每一个进程的执行都有一个执行顺序，该顺序是一个执行路径，或者叫一个控制单元。">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Multi-Thread/ThreadExends.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Multi-Thread/ticket-demo.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Multi-Thread/dead-lock-demo.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Multi-Thread/dead-lock-test.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Multi-Thread/dead-lock-test-2.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/Java-Basic-Multi-Thread/producer-customer.jpg">
-<meta property="og:updated_time" content="2015-07-21T16:49:50.529Z">
+<meta property="og:updated_time" content="2015-07-22T01:34:26.376Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 基础 -- 多线程">
 <meta name="twitter:description" content="1 多线程的概念要知道什么是多线程，先要知道什么是线程。要知道什么是线程，先要知道什么是进程。
-进程：一个正在执行中的程序。每一个进程的执行都有一个执行顺序，该顺序是一个执行路径，或者叫一个控制单元。
-线程：进程中的一个独立的控制单元。线程在控制着进程的执行。一个进程中至少有一个线程。
-多线程：JVM启动的时候会有一个进程java.exe，该进程中至少有一个线程负责java程序的运行，而且这个线程">
+进程：一个正在执行中的程序。每一个进程的执行都有一个执行顺序，该顺序是一个执行路径，或者叫一个控制单元。">
   
     <link rel="alternative" href="/atom.xml" title="Junbin&#39;s Blog" type="application/atom+xml">
   
@@ -219,7 +213,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="1_多线程的概念">1 多线程的概念</h2><p>要知道什么是多线程，先要知道什么是线程。要知道什么是线程，先要知道什么是进程。</p>
-<p>进程：一个正在执行中的程序。每一个进程的执行都有一个执行顺序，该顺序是一个执行路径，或者叫一个控制单元。</p>
+<p>进程：一个正在执行中的程序。每一个进程的执行都有一个执行顺序，该顺序是一个执行路径，或者叫一个控制单元。<br><a id="more"></a></p>
 <p>线程：进程中的一个独立的控制单元。线程在控制着进程的执行。一个进程中至少有一个线程。</p>
 <p>多线程：JVM启动的时候会有一个进程java.exe，该进程中至少有一个线程负责java程序的运行，而且这个线程运行的代码存在于main方法中。该线程称之为主线程。JVM不止启动一个线程，还有负责垃圾回收机制的线程。像这样一个进程有多个线程的执行方式称为多线程。</p>
 <p>多线程存在的意义：多线程能让程序产生同时运行的效果，提高执行效率。以JVM为例，主线程的代码执行完后会留在堆内存中，成为垃圾。启用负责垃圾回收机制的线程，可以释放堆内存中的垃圾，让程序执行更高效。</p>
