@@ -193,12 +193,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="assets/blogImg/yi-zhang-tu-kan-dong-android-shi-jian-fen-fa-ji-zhi/Android事件分发机制.png" alt="Android事件分发机制"></p>
-<p>此流程图是笔者基于 Android SDK 21 中 View 与 ViewGroup 的相关源码精心制作。图中展示了 Android 事件分发机制的主要流程，对于在应用开发中分析与触控事件相关问题的解决方案，可能会有所帮助。</p>
-<p>接下来会对图中某些部分做一些简单介绍，帮助大家更好理解。图中的开始点在左上方，表示手指按下屏幕的那一刻所触发的行为，也是水平方向的第一个区间。结束点在图的右下方，也就是水平方向的第二个区间，表示手指离开屏幕的所触发的行为。其中，onTouch 或 onClick 方法执行的前提是，给目标控件设置了触摸和点击事件，即 setOnTouchListener 或 setOnClickListener。这样，OnTouchListener 或 OnClickListener 才会实现接口方法回调 onTouch 或 onClick 方法。值得一提的是，如果触摸事件和点击事件都设置了，那么在 onTouch 方法消费了点击事件，也就是在返回 true 的情况下，其后的滑动和点击事件都不会响应。所以，onClick 方法不会执行。</p>
-<p>类似问题像是 ListView 中加了一个侧滑菜单，为什么 ListView 就不能滚动了？原因可能在于侧滑菜单在 ListView 中注册了 onTouch 事件，最后返回 true 消费了触摸事件，使得 ListView 本身的滚动事件失效了。所以应在 onTouch 中返回 false。</p>
-<p>另外，如果有任何问题，欢迎在评论区中留言。</p>
-
+        <p>此流程图是笔者基于 Android SDK 21 中 View 与 ViewGroup 的相关源码精心制作。图中展示了 Android 事件分发机制的主要流程，对于在应用开发中分析与触控事件相关问题的解决方案，可能会有所帮助。</p>
+<p>接下来会对图中某些部分做一些简单介绍，帮助大家更好理解。图中的开始点在左上方，表示手指按下屏幕的那一刻所触发的行为，也是水平方向的第一个区间。结束点在图的右下方，也就是水平方向的第二个区间，表示手指离开屏幕的所触发的行为。其中，onTouch 或 onClick 方法执行的前提是，给目标控
       
     </div>
     
@@ -211,6 +207,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/07/30/yi-zhang-tu-kan-dong-android-shi-jian-fen-fa-ji-zhi/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
