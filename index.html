@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a>
+						<a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a>
 					</div>
 				</section>
 				
@@ -166,6 +166,64 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-yi-zhang-tu-kan-dong-android-shi-jian-fen-fa-ji-zhi" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/30/yi-zhang-tu-kan-dong-android-shi-jian-fen-fa-ji-zhi/" class="article-date">
+  	<time datetime="2015-07-30T08:16:11.000Z" itemprop="datePublished">2015-07-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/30/yi-zhang-tu-kan-dong-android-shi-jian-fen-fa-ji-zhi/">一张图看懂 Android 事件分发机制</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="assets\blogImg\yi-zhang-tu-kan-dong-android-shi-jian-fen-fa-ji-zhi\Android事件分发机制.png" alt="Android事件分发机制"></p>
+<p>此流程图是笔者基于 Android SDK 21 中 View 与 ViewGroup 的相关源码精心制作。图中展示了 Android 事件分发机制的主要流程，对于在应用开发中分析与触控事件相关问题的解决方案，可能会有所帮助。</p>
+<p>接下来会对图中某些部分做一些简单介绍，帮助大家更好理解。图中的开始点在左上方，表示手指按下屏幕的那一刻所触发的行为，也是水平方向的第一个区间。结束点在图的右下方，也就是水平方向的第二个区间，表示手指离开屏幕的所触发的行为。其中，onTouch 或 onClick 方法执行的前提是，给目标控件设置了触摸和点击事件，即 setOnTouchListener 或 setOnClickListener。这样，OnTouchListener 或 OnClickListener 才会实现接口方法回调 onTouch 或 onClick 方法。值得一提的是，如果触摸事件和点击事件都设置了，那么在 onTouch 方法消费了点击事件，也就是在返回 true 的情况下，onClick 方法不会执行。</p>
+<p>另外，如果大家还有任何问题，欢迎在评论区中留言。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-Fast-setup-a-Github-blog" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -390,65 +448,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/03/06/Java-Basic-Web/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Java-Basic-GUI" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/03/04/Java-Basic-GUI/" class="article-date">
-  	<time datetime="2015-03-04T02:26:18.000Z" itemprop="datePublished">2015-03-04</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/04/Java-Basic-GUI/">Java 基础 -- GUI</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-_简述GUI">1. 简述GUI</h2><p>GUI（Graphical User Interface）是图形用户接口。用图形的方式来显示计算机操作界面，这样更方便直观。</p>
-<p>CLI（Command Line User Interface）是命令行用户接口。就是常见的DOS命令行，需要记忆一些常用的命令，操作不直观。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/03/04/Java-Basic-GUI/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
